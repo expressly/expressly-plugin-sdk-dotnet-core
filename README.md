@@ -8,11 +8,11 @@ The nuget package can be found here: [Expressly Plugin SDK](https://www.nuget.or
 
 You can also add it to your project by adding this line to your packages.config file:
 
-'''
+```
   <packages>
-    <package id="Expressly" version="1.1.1" targetFramework="net45" />
+    <package id="Expressly" version="1.1.2" targetFramework="net45" />
   <\packages>
-'''
+```
 
 * * *
 ## Reference Implementation
