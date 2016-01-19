@@ -1,5 +1,24 @@
 # Expressly .NET SDK
 The Expressly .NET SDK makes it easy to add Expressly support to your .NET web application
+
+* * *
+## NuGet Package
+
+The nuget package can be found here: [Expressly Plugin SDK](https://www.nuget.org/packages/Expressly/)
+
+You can also add it to your project by adding this line to your packages.config file:
+
+'''
+  <packages>
+    <package id="Expressly" version="1.1.1" targetFramework="net45" />
+  <\packages>
+'''
+
+* * *
+## Reference Implementation
+
+An example implementation can be found here: [Reference Implementation](https://github.com/expressly/expressly-plugin-dotnet-reference-implementation)
+
 * * *
 ## Prerequisites
 
