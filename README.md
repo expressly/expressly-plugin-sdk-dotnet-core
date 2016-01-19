@@ -122,6 +122,6 @@ In order to enable logging with the SDK, add the following configuration informa
 </configuration>
 ```
 
-# Testing
+## Testing your solution against our servers
 
 An integration testing environment is under development.
