@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="Expressly.SDK.Files.csproj" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{63246661-D521-448C-A615-249390644284}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Expressly</RootNamespace>
+    <AssemblyName>Expressly</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BaseIntermediateOutputPath>obj\net45</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\net45\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NET_4_5</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Debug\net45\Expressly.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\net45\</OutputPath>
+    <DefineConstants>TRACE;NET_4_5</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Release\net45\Expressly.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\expressly-open-source.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Api\Resources\Elements\Address.cs" />
+    <Compile Include="Provider\APIContext.cs" />
+    <Compile Include="Api\Resources\Elements\Banner.cs" />
+    <Compile Include="Api\Resources\Elements\Cart.cs" />
+    <Compile Include="Api\Resources\Elements\Customer.cs" />
+    <Compile Include="Api\Resources\Elements\CustomerData.cs" />
+    <Compile Include="Api\Resources\Elements\EmailAddressRequest.cs" />
+    <Compile Include="Api\Resources\Elements\EmailStatusList.cs" />
+    <Compile Include="Api\Resources\Elements\InvoiceCustomerFilter.cs" />
+    <Compile Include="Api\Resources\Elements\Email.cs" />
+    <Compile Include="Provider\ExpresslyClient.cs" />
+    <Compile Include="Api\Resources\ExpresslySerializableListObject.cs" />
+    <Compile Include="Api\Resources\ExpresslySerializableObject.cs" />
+    <Compile Include="Api\Resources\IExpresslySerializableObject.cs" />
+    <Compile Include="Api\Resources\Elements\Invoice.cs" />
+    <Compile Include="Api\Resources\Elements\InvoiceList.cs" />
+    <Compile Include="Api\Resources\Elements\InvoiceListRequest.cs" />
+    <Compile Include="Util\JsonFormatter.cs" />
+    <Compile Include="Api\Resources\Elements\MerchantPing.cs" />
+    <Compile Include="Api\Resources\Elements\Metadata.cs" />
+    <Compile Include="Api\Resources\Elements\Migration.cs" />
+    <Compile Include="Api\Resources\Elements\Order.cs" />
+    <Compile Include="Api\Resources\Elements\Phone.cs" />
+    <Compile Include="Api\Resources\Elements\PingPluginResponse.cs" />
+    <Compile Include="Api\Resources\Elements\RegisteredPluginResponse.cs" />
+    <Compile Include="Api\Resources\Elements\RegisterPluginRequest.cs" />
+    <Compile Include="Api\Resources\Elements\SuccessMessageResponse.cs" />
+    <Compile Include="BaseConstants.cs" />
+    <Compile Include="Api\Exception\ConfigException.cs" />
+    <Compile Include="Api\Exception\ConnectionException.cs" />
+    <Compile Include="Api\Exception\ExpresslyException.cs" />
+    <Compile Include="Api\Exception\HttpException.cs" />
+    <Compile Include="Provider\ExpresslyProvider.cs" />
+    <Compile Include="MerchantRouter.cs" />
+    <Compile Include="ExpresslyPlugin.cs" />
+    <Compile Include="Provider\HttpConnection.cs" />
+    <Compile Include="Log\BaseLogger.cs" />
+    <Compile Include="Log\DiagnosticsLogger.cs" />
+    <Compile Include="Log\Log4netLogger.cs" />
+    <Compile Include="Log\LogConfiguration.cs" />
+    <Compile Include="Log\Logger.cs" />
+    <Compile Include="Log\LogMessage.cs" />
+    <Compile Include="Log\TraceSourceUtil.cs" />
+    <Compile Include="Manager\ConfigManager.cs" />
+    <Compile Include="Manager\ConnectionManager.cs" />
+    <Compile Include="Manager\SDKConfigHandler.cs" />
+    <Compile Include="Provider\IMerchantProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\ArgumentValidator.cs" />
+    <Compile Include="Util\HttpRequestExtensions.cs" />
+    <Compile Include="Util\QueryParameters.cs" />
+    <Compile Include="Util\SDKUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
