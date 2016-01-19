@@ -28,6 +28,15 @@ An example implementation can be found here: [Reference Implementation](https://
 ## Configuration
 In order to use the Expressly .NET SDK with your application, you will need to first configure your application. By default, the SDK will attempt to look for Expressly-specific settings in your application's **web.config** file.
 
+# Implementation
+
+Make sure to create an Implementation of the IMerchantProvider interface, this is necessary for the plugin to communicate with your own logic.
+
+The ExpresslyProvider class gives you methods to talk directly to our back end.
+
+Make sure to publish ExpresslyRouter, this exposes the necessary endpoints for our back end to talk to.
+
+Finally, configure your application. (details below)
 
 # Expressly Config Settings
 
