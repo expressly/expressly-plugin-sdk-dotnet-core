@@ -121,3 +121,7 @@ In order to enable logging with the SDK, add the following configuration informa
   </appSettings>
 </configuration>
 ```
+
+# Testing
+
+An integration testing environment is under development.
