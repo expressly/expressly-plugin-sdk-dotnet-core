@@ -23,7 +23,7 @@ The following is a sample config file containing the configuration sections that
 <!-- Expressly Http Module settings -->
     <system.webServer>
         <modules>
-            <add name="ExpresslyModule" type="Expressly.ExpresslyModule" />
+            <add name="ExpresslyRouter" type="Expressly.ExpresslyRouter" />
         </modules>
     </system.webServer>
 
@@ -45,8 +45,8 @@ The following table defines the currently supported settings that can be specifi
 | mode | Determines which Expressly endpoint URL will be used with your application. Possible values are live or sandbox. | sandbox |
 | requestRetries | The number of times HTTP requests should be attempted by the SDK before an error is thrown. | 3 |
 | connectionTimeout | The amount of time (in milliseconds) before an HTTP request should timeout. | 30000 |
-| apiKey | Your application's Api Key as specified on your Expressly account's | none |
-| apiBaseUrl | Url for you site | none |
+| apiKey | Your application's Api Key as specified on your Expressly account | none |
+| apiBaseUrl | Url for you site, where the expressly plugin is reacheable from | none |
   
 
 # Log4net Config Settings (Optional)
