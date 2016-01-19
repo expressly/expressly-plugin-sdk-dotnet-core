@@ -124,4 +124,4 @@ In order to enable logging with the SDK, add the following configuration informa
 
 ## Testing your solution against our servers
 
-An integration testing environment is under development.
+A test harness is under development.
