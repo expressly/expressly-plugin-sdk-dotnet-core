@@ -35,7 +35,7 @@ namespace Expressly.Api
         private ConnectionManager()
         {
 #if NET_4_5 || NET_4_5_1
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls;
 #else
             if(SDKUtil.IsNet45OrLaterDetected())
             {
