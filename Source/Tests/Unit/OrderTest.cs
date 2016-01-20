@@ -1,12 +1,11 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Expressly.Api;
+﻿using NUnit.Framework;
 
 namespace Expressly.Testing
 {
-    [TestClass]
+    [TestFixture]
     public class OrderTest
     {
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void OrderObjectTest()
         {
             var testObject = TestModels.GetOrder();
@@ -20,13 +19,13 @@ namespace Expressly.Testing
             Assert.AreEqual(10.00, testObject.tax);
         }
 
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void OrderConvertToJsonTest()
         {
             Assert.IsFalse(TestModels.GetOrder().ConvertToJson().Length == 0);
         }
 
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void OrderToStringTest()
         {
             Assert.IsFalse(TestModels.GetOrder().ToString().Length == 0);

@@ -1,13 +1,12 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Expressly.Api;
+﻿using NUnit.Framework;
 
 namespace Expressly.Testing
 {
-    [TestClass]
+    [TestFixture]
     public class CustomerTest : BaseTest
     {
 
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void CustomerObjectTest()
         {
             var testObject = TestModels.GetCustomer();
@@ -18,14 +17,14 @@ namespace Expressly.Testing
         }
 
 
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void CustomerCustomerConvertToJsonTest()
         {
             Assert.IsFalse(TestModels.GetCustomer().ConvertToJson().Length == 0);
         }
 
 
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void CustomerToStringTest()
         {
             Assert.IsFalse(TestModels.GetCustomer().ToString().Length == 0);

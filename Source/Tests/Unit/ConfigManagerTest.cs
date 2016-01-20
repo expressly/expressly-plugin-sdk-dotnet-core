@@ -1,14 +1,13 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Expressly.Api;
-using Expressly;
+using NUnit.Framework;
 
 namespace Expressly.Testing
 {
-    [TestClass]
+    [TestFixture]
     public class ConfigManagerTest
     {
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void LoadConfigDefaults()
         {
             var config = ConfigManager.GetConfigWithDefaults(null);
@@ -18,7 +17,7 @@ namespace Expressly.Testing
             Assert.AreEqual("sandbox", config[BaseConstants.ApplicationModeConfig]);
         }
 
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void LoadConfigFromAppConfig()
         {
             var config = ConfigManager.Instance.GetProperties();
@@ -30,14 +29,14 @@ namespace Expressly.Testing
             Assert.AreEqual("http://test.shop.com", config[BaseConstants.ApiBaseUrl]);
         }
 
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void VerifyIsLiveModeEnabledWithDefaultConfig()
         {
             var config = ConfigManager.GetConfigWithDefaults(null);
             Assert.IsFalse(ConfigManager.IsLiveModeEnabled(config));
         }
 
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void VerifyIsLiveModeEnabledWithSandboxModeSet()
         {
             var config = new Dictionary<string, string>
@@ -47,7 +46,7 @@ namespace Expressly.Testing
             Assert.IsFalse(ConfigManager.IsLiveModeEnabled(config));
         }
 
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void VerifyIsLiveModeEnabledWithLiveModeSet()
         {
             var config = new Dictionary<string, string>

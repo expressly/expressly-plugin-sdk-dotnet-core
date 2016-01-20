@@ -1,12 +1,11 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Expressly.Api;
+﻿using NUnit.Framework;
 
 namespace Expressly.Testing
 {
-    [TestClass]
+    [TestFixture]
     public class PhoneTest
     {
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void PhoneObjectTest()
         {
             var testObject = TestModels.GetPhone();
@@ -15,13 +14,13 @@ namespace Expressly.Testing
             Assert.AreEqual(44, testObject.countryCode);
         }
 
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void PhoneConvertToJsonTest()
         {
             Assert.IsFalse(TestModels.GetPhone().ConvertToJson().Length == 0);
         }
 
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void PhoneToStringTest()
         {
             Assert.IsFalse(TestModels.GetPhone().ToString().Length == 0);

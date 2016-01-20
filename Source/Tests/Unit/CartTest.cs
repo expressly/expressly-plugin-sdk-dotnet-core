@@ -1,12 +1,11 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Expressly.Api;
+﻿using NUnit.Framework;
 
 namespace Expressly.Testing
 {
-    [TestClass]
+    [TestFixture]
     public class CartTest
     {
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void CartObjectTest()
         {
             var testObject = TestModels.GetCart();
@@ -14,13 +13,13 @@ namespace Expressly.Testing
             Assert.AreEqual("641356", testObject.productId);
         }
 
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void CartConvertToJsonTest()
         {
             Assert.IsFalse(TestModels.GetCart().ConvertToJson().Length == 0);
         }
 
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void CartToStringTest()
         {
             Assert.IsFalse(TestModels.GetCart().ToString().Length == 0);

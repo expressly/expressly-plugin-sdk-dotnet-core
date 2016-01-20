@@ -1,13 +1,12 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Expressly.Api;
+﻿using NUnit.Framework;
 
 namespace Expressly.Testing
 {
-    [TestClass]
+    [TestFixture]
     public class AddressTest
     {
         
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void AddressObjectTest()
         {
             var testObject = TestModels.GetAddress();
@@ -24,13 +23,13 @@ namespace Expressly.Testing
             Assert.AreEqual("GB", testObject.country);
         }
 
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void AddressConvertToJsonTest()
         {
             Assert.IsFalse(TestModels.GetAddress().ConvertToJson().Length == 0);
         }
 
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void AddressToStringTest()
         {
             Assert.IsFalse(TestModels.GetAddress().ToString().Length == 0);

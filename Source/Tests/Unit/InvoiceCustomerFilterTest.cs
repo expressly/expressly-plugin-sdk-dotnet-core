@@ -1,9 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Expressly.Api;
+﻿using Expressly.Api;
+using NUnit.Framework;
 
 namespace Expressly.Testing
 {
-    [TestClass]
+    [TestFixture]
     public class InvoiceCustomerFilterTest
     {
         public static readonly string InvoiceCustomerFilterJson =
@@ -18,7 +18,7 @@ namespace Expressly.Testing
         }
 
 
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void InvoiceCustomerFilterObjectTest()
         {
             var testObject = GetInvoiceCustomerFilter();
@@ -28,14 +28,14 @@ namespace Expressly.Testing
         }
 
 
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void InvoiceCustomerFilterConvertToJsonTest()
         {
             Assert.IsFalse(GetInvoiceCustomerFilter().ConvertToJson().Length == 0);
         }
 
 
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void InvoiceCustomerFilterToStringTest()
         {
             Assert.IsFalse(GetInvoiceCustomerFilter().ToString().Length == 0);

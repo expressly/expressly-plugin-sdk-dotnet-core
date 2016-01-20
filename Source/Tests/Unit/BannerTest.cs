@@ -1,13 +1,12 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Expressly.Api;
+﻿using NUnit.Framework;
 
 
 namespace Expressly.Testing
 {
-    [TestClass]
+    [TestFixture]
     public class BannerTest
     {
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void BannerObjectTest()
         {
             var testObject = TestModels.GetBanner();
@@ -16,13 +15,13 @@ namespace Expressly.Testing
         }
 
 
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void BannerConvertToJsonTest()
         {
             Assert.IsFalse(TestModels.GetBanner().ConvertToJson().Length == 0);
         }
-        
-        [TestMethod, TestCategory("Unit")]
+
+        [Test, Category("Unit")]
         public void BannerToStringTest()
         {
             Assert.IsFalse(TestModels.GetBanner().ToString().Length == 0);

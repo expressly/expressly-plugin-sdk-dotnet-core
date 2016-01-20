@@ -1,24 +1,24 @@
 ﻿using System.Diagnostics;
 using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Expressly.Api;
+using NUnit.Framework;
 
 namespace Expressly.Testing
 {
-    [TestClass]
+    [TestFixture]
     public abstract class BaseTest
     {
         private bool hasPreviousRecordings;
 
         public TestContext TestContext { get; set; }
 
-        [TestInitialize]
+        [SetUp]
         public virtual void Setup()
         {
             this.hasPreviousRecordings = false;
         }
 
-        [TestCleanup]
+        [TearDown]
         public virtual void TearDown()
         {
             if(this.hasPreviousRecordings)
@@ -39,7 +39,7 @@ namespace Expressly.Testing
             bool hasRequestDetails = ExpresslyClient.LastRequestDetails != null && ExpresslyClient.LastRequestDetails.Value != null;
             bool hasResponseDetails = ExpresslyClient.LastResponseDetails != null && ExpresslyClient.LastResponseDetails.Value != null;
 
-            Trace.WriteLine("  \"test\": \"" + this.TestContext.TestName + "\",");
+
             Trace.WriteLine("  \"success\": " + success.ToString().ToLower() + (hasRequestDetails || hasResponseDetails ? "," : ""));
 
             // Record the request details.

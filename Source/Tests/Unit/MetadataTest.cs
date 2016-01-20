@@ -1,9 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Expressly.Api;
+﻿using Expressly.Api;
+using NUnit.Framework;
 
 namespace Expressly.Testing
 {
-    [TestClass]
+    [TestFixture]
     public class MetadataTest
     {
         public static readonly string MetadataJson =
@@ -17,7 +17,7 @@ namespace Expressly.Testing
             return JsonFormatter.ConvertFromJson<Metadata>(MetadataJson);
         }
 
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void MetadataObjectTest()
         {
             var testObject = GetMetadata();
@@ -26,13 +26,13 @@ namespace Expressly.Testing
             Assert.IsTrue(testObject.issuerData.Count == 0);
         }
 
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void MetadataConvertToJsonTest()
         {
             Assert.IsFalse(GetMetadata().ConvertToJson().Length == 0);
         }
 
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void MetadataToStringTest()
         {
             Assert.IsFalse(GetMetadata().ToString().Length == 0);

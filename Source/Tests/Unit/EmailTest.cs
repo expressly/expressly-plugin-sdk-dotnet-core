@@ -1,12 +1,11 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Expressly.Api;
+﻿using NUnit.Framework;
 
 namespace Expressly.Testing
 {
-    [TestClass]
+    [TestFixture]
     public class EmailTest
     {
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void EmailObjectTest()
         {
             var testObject = TestModels.GetEmail();
@@ -14,13 +13,13 @@ namespace Expressly.Testing
             Assert.AreEqual("personal", testObject.alias);
         }
 
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void EmailConvertToJsonTest()
         {
             Assert.IsFalse(TestModels.GetEmail().ConvertToJson().Length == 0);
         }
 
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void EmailToStringTest()
         {
             Assert.IsFalse(TestModels.GetEmail().ToString().Length == 0);

@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using Expressly.Api;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace Expressly.Testing
 {
-    [TestClass]
+    [TestFixture]
     public class InvoiceListTest
     {
         public static InvoiceList GetInvoiceList()
@@ -15,20 +15,20 @@ namespace Expressly.Testing
             return invoicesList;
         }
 
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void InvoiceListObjectTest()
         {
             var list = GetInvoiceList();
             Assert.AreEqual(list.invoices.Count, 2);
         }
 
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void InvoiceListConvertToJsonTest()
         {
             Assert.IsFalse(GetInvoiceList().ConvertToJson().Length == 0);
         }
 
-        [TestMethod, TestCategory("Unit")]
+        [Test, Category("Unit")]
         public void InvoiceListToStringTest()
         {
             Assert.IsFalse(GetInvoiceList().ToString().Length == 0);
