@@ -1,5 +1,10 @@
 language: csharp
 
+# whitelist
+branches:
+  only:
+    - master
+
 install:
     - sudo apt-get install -y gtk-sharp2
     - nuget restore ./Source/Expressly.SDK.NET45.sln
