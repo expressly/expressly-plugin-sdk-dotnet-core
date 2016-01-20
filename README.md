@@ -7,6 +7,8 @@
 * * *
 The Expressly .NET SDK makes it easy to add Expressly support to your .NET web application
 
+It also works on a non .NET C# application.
+
 * * *
 
 ## Reference Implementation
