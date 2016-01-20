@@ -1,3 +1,7 @@
+[![Expressly](https://buyexpressly.com/assets/img/expressly-logo-sm-gray.png)](https://buyexpressly.com)
+
+![Travis](https://travis-ci.org/expressly/expressly-plugin-sdk-dotnet-core.svg?branch=master)
+
 # Expressly .NET SDK
 The Expressly .NET SDK makes it easy to add Expressly support to your .NET web application
 
