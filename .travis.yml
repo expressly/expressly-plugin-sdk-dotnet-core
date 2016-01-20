@@ -8,9 +8,11 @@ branches:
 install:
     - sudo apt-get install -y gtk-sharp2
     - nuget restore ./Source/Expressly.SDK.NET45.sln
+    - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 
 mono:
     - latest
 
 script: 
-    - xbuild ./Source/SDK/Expressly.SDK.NET45.csproj
+    - xbuild ./Source/Expressly.SDK.NET45.sln
+    - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Source/Tests/bin/Debug/net45/Expressly.Tests.dll
