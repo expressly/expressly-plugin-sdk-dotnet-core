@@ -2,10 +2,10 @@ language: csharp
 
 install:
     - sudo apt-get install -y gtk-sharp2
-    - nuget restore ./Source/SDK/Expressly.SDK.NET45.csproj
 
 mono:
     - latest
 
 script: 
+    - nuget restore ./Source/SDK/Expressly.SDK.NET45.csproj
     - xbuild ./Source/SDK/Expressly.SDK.NET45.csproj
