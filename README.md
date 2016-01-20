@@ -3,7 +3,7 @@
 
 # Expressly .NET SDK
 ![Travis](https://travis-ci.org/expressly/expressly-plugin-sdk-dotnet-core.svg?branch=master)
-
+[![codecov.io](https://codecov.io/github/expressly/expressly-plugin-sdk-dotnet-core/coverage.svg?branch=master)](https://codecov.io/github/expressly/expressly-plugin-sdk-dotnet-core?branch=master)
 * * *
 The Expressly .NET SDK makes it easy to add Expressly support to your .NET web application
 
