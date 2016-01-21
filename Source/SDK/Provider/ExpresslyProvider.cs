@@ -41,7 +41,8 @@ namespace Expressly.Api
         /// Get Banner
         /// </summary>
         /// <param name="apiContext">APIContext used for the API call.</param>
-        /// <param name="merchantUuid">Email</param>
+        /// <param name="email">Email</param>
+        /// <param name="merchantUuid">merchantUuid</param>
         /// <returns>Banner Object</returns>
         public Banner GetBanner(APIContext apiContext, string email, string merchantUuid = "")
         {
@@ -118,7 +119,5 @@ namespace Expressly.Api
 
             return ExpresslyClient.ConfigureAndExecute<SuccessMessageResponse>(apiContext, ExpresslyClient.HttpMethod.POST, resourcePath).success;
         }
-
-
     }
 }

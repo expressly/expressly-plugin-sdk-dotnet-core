@@ -5,16 +5,23 @@ branches:
   only:
     - master
 
+before_install:
+    - pip install --user codecov
+
+after_success:
+    - codecov
+
 install:
     - sudo apt-get install -y gtk-sharp2
     - nuget restore ./Source/Expressly.SDK.NET45.sln
+    - nuget restore ./Source/Expressly.SDK.NET40.sln
     - nuget install NUnit.Runners -Version 3.0.1 -OutputDirectory testrunner
-#    - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 
 mono:
     - latest
 
 script: 
     - xbuild ./Source/Expressly.SDK.NET45.sln
+    - xbuild ./Source/Expressly.SDK.NET40.sln
     - mono ./testrunner/NUnit.Console.3.0.1/tools/nunit3-console.exe ./Source/Tests/bin/Debug/net45/Expressly.Tests.dll
- #   - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Source/Tests/bin/Debug/net45/Expressly.Tests.dll
+    - mono ./testrunner/NUnit.Console.3.0.1/tools/nunit3-console.exe ./Source/Tests/bin/Debug/net40/Expressly.Tests.dll

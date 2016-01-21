@@ -43,7 +43,5 @@ namespace Expressly.Util
 
             apiContext.HTTPHeaders[BaseConstants.ContentTypeHeader] = BaseConstants.ContentTypeHeaderJson;
         }
-
-
     }
 }

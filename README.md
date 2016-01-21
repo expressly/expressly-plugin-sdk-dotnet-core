@@ -3,12 +3,12 @@
 
 # Expressly .NET SDK
 ![Travis](https://travis-ci.org/expressly/expressly-plugin-sdk-dotnet-core.svg?branch=master)
+[![codecov.io](https://codecov.io/github/expressly/expressly-plugin-sdk-dotnet-core/coverage.svg?branch=master)](https://codecov.io/github/expressly/expressly-plugin-sdk-dotnet-core?branch=master)
+[![NuGet](https://img.shields.io/nuget/v/Expressly.svg)](https://www.nuget.org/packages/Expressly)
+[![Build status](https://ci.appveyor.com/api/projects/status/pvdsanl7almdu9d8/branch/master?svg=true&passingText=Windows%20-%20OK&failingText=Windows%20-%20Fail)](https://ci.appveyor.com/project/gcorre02/expressly-plugin-sdk-dotnet-core/branch/master)
 
 * * *
-The Expressly .NET SDK makes it easy to add Expressly support to your .NET web application
-
-It also works on a non .NET C# application.
-
+The Expressly .NET SDK makes it easy to add Expressly Network API to help developers wishing to integrate their e-commerce platform with the [Expressly network](https://buyexpressly.com/).
 * * *
 
 ## Reference Implementation
@@ -17,19 +17,20 @@ An example implementation and tutorial can be found here: [Reference Implementat
 
 
 * * *
-## NuGet Package
+## Installation
 
 The nuget package can be found here: [Expressly Plugin SDK](https://www.nuget.org/packages/Expressly/)
 
-You can also add it to your project by adding this line to your packages.config file:
-
+Run the following command in the NuGet Package Manager console to install the SDK and all its dependencies:
 ```
-  <packages>
-    <package id="Expressly" version="1.1.2" targetFramework="net45" />
-  <\packages>
+PM> Install-Package Expressly
 ```
 * * *
 
 ## Prerequisites
 
 - .NET 4.0 or later
+
+## License
+Copyright (c) 2015 Expressly. See [LICENSE](https://github.com/expressly/expressly-plugin-sdk-dotnet-core/blob/master/LICENSE) for further details.
+

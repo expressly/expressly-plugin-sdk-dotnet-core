@@ -224,7 +224,6 @@ namespace Expressly.Util
                     {
                         objectList.Add(null);
                     }
-
                 }
             }
             return objectList.ToArray();

@@ -77,8 +77,8 @@ namespace Expressly.Log
                     log4netCoreILoggerGetMethodLog = log4netCoreILogger.GetMethod("Log", new Type[] { typeof(Type), log4netCoreLevel, typeof(object), typeof(System.Exception) });
                     log4netCoreILoggerGetMethodIsEnabledFor = log4netCoreILogger.GetMethod("IsEnabledFor", new Type[] { log4netCoreLevel });
 
-                    if (log4netCoreLoggerManagerGetMethodGetLogger == null || 
-                        log4netCoreILoggerGetMethodIsEnabledFor == null || 
+                    if (log4netCoreLoggerManagerGetMethodGetLogger == null ||
+                        log4netCoreILoggerGetMethodIsEnabledFor == null ||
                         log4netCoreILogger == null ||
                         log4netCoreLevel == null ||
                         log4netCoreILoggerGetMethodLog == null)
@@ -120,9 +120,9 @@ namespace Expressly.Log
                 return;
             }
 
-            this.log4netCoreLoggerManagerGetMethodGetLoggerInvoke = log4netCoreLoggerManagerGetMethodGetLogger.Invoke(null, new object[] { Assembly.GetCallingAssembly(), givenType }); 
+            this.log4netCoreLoggerManagerGetMethodGetLoggerInvoke = log4netCoreLoggerManagerGetMethodGetLogger.Invoke(null, new object[] { Assembly.GetCallingAssembly(), givenType });
         }
-       
+
         /// <summary>
         /// Override the wrapper for log4net ILog IsDebugEnabled
         /// </summary>
@@ -238,13 +238,13 @@ namespace Expressly.Log
                 this.log4netCoreLoggerManagerGetMethodGetLoggerInvoke,
                 new object[]
                 {
-                    expresslyLogLogger, 
+                    expresslyLogLogger,
                     log4netCoreLevelDebug,
-                    new LogMessage(message), 
+                    new LogMessage(message),
                     null
                 });
         }
-        
+
         /// <summary>
         /// Override the wrapper for log4net ILog Debug
         /// </summary>
@@ -256,7 +256,7 @@ namespace Expressly.Log
                 this.log4netCoreLoggerManagerGetMethodGetLoggerInvoke,
                 new object[]
                 {
-                    expresslyLogLogger, 
+                    expresslyLogLogger,
                     log4netCoreLevelDebug,
                     new LogMessage(message),
                     exception
@@ -274,7 +274,7 @@ namespace Expressly.Log
                 this.log4netCoreLoggerManagerGetMethodGetLoggerInvoke,
                 new object[]
                 {
-                    expresslyLogLogger, 
+                    expresslyLogLogger,
                     log4netCoreLevelDebug,
                     new LogMessage(format, args),
                     null
@@ -291,13 +291,13 @@ namespace Expressly.Log
                 this.log4netCoreLoggerManagerGetMethodGetLoggerInvoke,
                 new object[]
                 {
-                    expresslyLogLogger, 
+                    expresslyLogLogger,
                     log4netCoreLevelError,
                     new LogMessage(message),
                     null
                 });
         }
-        
+
         /// <summary>
         /// Override the wrapper for log4net ILog Error
         /// </summary>
@@ -309,7 +309,7 @@ namespace Expressly.Log
                 this.log4netCoreLoggerManagerGetMethodGetLoggerInvoke,
                 new object[]
                 {
-                    expresslyLogLogger, 
+                    expresslyLogLogger,
                     log4netCoreLevelError,
                     new LogMessage(message),
                     exception
@@ -327,7 +327,7 @@ namespace Expressly.Log
                 this.log4netCoreLoggerManagerGetMethodGetLoggerInvoke,
                 new object[]
                 {
-                    expresslyLogLogger, 
+                    expresslyLogLogger,
                     log4netCoreLevelError,
                     new LogMessage(format, args),
                     null
@@ -344,7 +344,7 @@ namespace Expressly.Log
                 this.log4netCoreLoggerManagerGetMethodGetLoggerInvoke,
                 new object[]
                 {
-                    expresslyLogLogger, 
+                    expresslyLogLogger,
                     log4netCoreLevelInfo,
                     new LogMessage(message),
                     null
@@ -362,7 +362,7 @@ namespace Expressly.Log
                 this.log4netCoreLoggerManagerGetMethodGetLoggerInvoke,
                 new object[]
                 {
-                    expresslyLogLogger, 
+                    expresslyLogLogger,
                     log4netCoreLevelInfo,
                     new LogMessage(message),
                     exception
@@ -380,7 +380,7 @@ namespace Expressly.Log
                 this.log4netCoreLoggerManagerGetMethodGetLoggerInvoke,
                 new object[]
                 {
-                    expresslyLogLogger, 
+                    expresslyLogLogger,
                     log4netCoreLevelInfo,
                     new LogMessage(format, args),
                     null
@@ -397,13 +397,13 @@ namespace Expressly.Log
                 this.log4netCoreLoggerManagerGetMethodGetLoggerInvoke,
                 new object[]
                 {
-                    expresslyLogLogger, 
+                    expresslyLogLogger,
                     log4netCoreLevelWarn,
                     new LogMessage(message),
                     null
                 });
         }
-        
+
         /// <summary>
         /// Override the wrapper for log4net ILog Warn
         /// </summary>
@@ -415,7 +415,7 @@ namespace Expressly.Log
                 this.log4netCoreLoggerManagerGetMethodGetLoggerInvoke,
                 new object[]
                 {
-                    expresslyLogLogger, 
+                    expresslyLogLogger,
                     log4netCoreLevelWarn,
                     new LogMessage(message),
                     exception
@@ -433,7 +433,7 @@ namespace Expressly.Log
                 this.log4netCoreLoggerManagerGetMethodGetLoggerInvoke,
                 new object[]
                 {
-                    expresslyLogLogger, 
+                    expresslyLogLogger,
                     log4netCoreLevelWarn,
                     new LogMessage(format, args),
                     null
