@@ -4,8 +4,8 @@ branches:
   - master
 nuget:
   project_feed: true
-before_build:
-- cmd: nuget restore ./Source/Expressly.SDK.NET45.sln
+#before_build:
+#- cmd: nuget restore ./Source/Expressly.SDK.NET45.sln
 build:
   project: Expressly.SDK.NET45.sln
   verbosity: minimal
