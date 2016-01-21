@@ -2,12 +2,10 @@ version: 1.1.2.{build}
 branches:
   only:
   - master
-install:
-- set PATH=C:\Program Files (x86)\MSBuild\14.0\Bin;%PATH%
 nuget:
   project_feed: true
 before_build:
-- nuget restore
+- nuget restore C:\projects\expressly-plugin-sdk-dotnet-core\Source\Expressly.SDK.NET45.sln
 build:
-  project: C:\Program Files (x86)\MSBuild\14.0\Bin\expressly-plugin-sdk-dotnet-core\Source\Expressly.SDK.NET45.sln
+  project: C:\projects\expressly-plugin-sdk-dotnet-core\Source\Expressly.SDK.NET45.sln
   verbosity: minimal
