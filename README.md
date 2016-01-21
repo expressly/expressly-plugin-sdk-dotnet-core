@@ -4,8 +4,8 @@
 # Expressly .NET SDK
 ![Travis](https://travis-ci.org/expressly/expressly-plugin-sdk-dotnet-core.svg?branch=master)
 [![codecov.io](https://codecov.io/github/expressly/expressly-plugin-sdk-dotnet-core/coverage.svg?branch=master)](https://codecov.io/github/expressly/expressly-plugin-sdk-dotnet-core?branch=master)
-[![NuGet](https://img.shields.io/nuget/v/Expressly.svg)](https://www.nuget.org/packages/Expressly)
 [![Build status](https://ci.appveyor.com/api/projects/status/pvdsanl7almdu9d8/branch/master?svg=true&passingText=Windows%20-%20OK&failingText=Windows%20-%20Fail)](https://ci.appveyor.com/project/gcorre02/expressly-plugin-sdk-dotnet-core/branch/master)
+[![NuGet](https://img.shields.io/nuget/v/Expressly.svg)](https://www.nuget.org/packages/Expressly)
 
 * * *
 The Expressly .NET SDK makes it easy to add Expressly Network API to help developers wishing to integrate their e-commerce platform with the [Expressly network](https://buyexpressly.com/).
