@@ -10,6 +10,6 @@ build:
   project: C:\projects\expressly-plugin-sdk-dotnet-core\Source\Expressly.SDK.NET45.sln
   verbosity: minimal
 after_test:
-  - cmd: C:\projects\expressly-plugin-sdk-dotnet-core\Source\packages\OpenCover.4.6.166\tools\OpenCover.Console.exe -register:user -target:"C:\projects\expressly-plugin-sdk-dotnet-core\Source\packages\NUnit.Console.3.0.1\tools\nunit3-console.exe" -targetargs:"C:\projects\expressly-plugin-sdk-dotnet-core\Source\Tests\bin\Debug\net45\Expressly.Tests.dll" -filter:"+[Expressly]* -[Expressly]Expressly.Log.* -[Expressly]Expressly.Testing.Log" -excludebyattribute:*.ExcludeFromCodeCoverage* -hideskipped:All -output:Expressly_coverage.xml
+  - cmd: C:\projects\expressly-plugin-sdk-dotnet-core\Source\packages\OpenCover.4.6.166\tools\OpenCover.Console.exe -register:user -target:"nunit3-console.exe" -targetargs:"C:\projects\expressly-plugin-sdk-dotnet-core\Source\Tests\bin\Debug\net45\Expressly.Tests.dll" -filter:"+[Expressly]* -[Expressly]Expressly.Log.* -[Expressly]Expressly.Testing.Log" -excludebyattribute:*.ExcludeFromCodeCoverage* -hideskipped:All -output:Expressly_coverage.xml
   - cmd: pip install codecov
   - cmd: codecov -f "Expressly_coverage.xml"
