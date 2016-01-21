@@ -1,29 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <ItemGroup>
-    <ExternalCompile Include="ExpresslyPluginTest.cs" />
-    <ExternalCompile Include="InvoiceCustomerFilterTest.cs" />
-    <ExternalCompile Include="InvoiceListRequestTest.cs" />
-    <ExternalCompile Include="InvoiceListTest.cs" />
-    <ExternalCompile Include="OrderTest.cs" />
-    <ExternalCompile Include="InvoiceTest.cs" />
-    <ExternalCompile Include="CampaignBannerTest.cs" />
-    <ExternalCompile Include="BannerTest.cs" />
-    <ExternalCompile Include="MetadataTest.cs" />
-    <ExternalCompile Include="MigrationTest.cs" />
-    <ExternalCompile Include="CampaignTest.cs" />
-    <ExternalCompile Include="CustomerTest.cs" />
-    <ExternalCompile Include="CampaignCustomerTest.cs" />
-    <ExternalCompile Include="PhoneTest.cs" />
-    <ExternalCompile Include="EmailTest.cs" />
-    <ExternalCompile Include="APIContextTest.cs" />
+   <ItemGroup>
     <ExternalCompile Include="BaseTest.cs" />
-    <ExternalCompile Include="ConfigManagerTest.cs" />
-    <ExternalCompile Include="AddressTest.cs" />
-    <ExternalCompile Include="CartTest.cs" />
-    <ExternalCompile Include="CustomerDataTest.cs" />
-    <ExternalCompile Include="MerchantTest.cs" />
     <ExternalCompile Include="Properties\AssemblyInfo.cs" />
     <ExternalCompile Include="TestingUtil.cs" />
+    <ExternalCompile Include="TestModels.cs" />
+    <ExternalCompile Include="Unit\AddressTest.cs" />
+    <ExternalCompile Include="Unit\APIContextTest.cs" />
+    <ExternalCompile Include="Unit\BannerTest.cs" />
+    <ExternalCompile Include="Unit\CartTest.cs" />
+    <ExternalCompile Include="Unit\ConfigManagerTest.cs" />
+    <ExternalCompile Include="Unit\CustomerDataTest.cs" />
+    <ExternalCompile Include="Unit\CustomerTest.cs" />
+    <ExternalCompile Include="Unit\EmailTest.cs" />
+    <ExternalCompile Include="Unit\ExpresslyPluginTest.cs" />
+    <ExternalCompile Include="Unit\InvoiceCustomerFilterTest.cs" />
+    <ExternalCompile Include="Unit\InvoiceListRequestTest.cs" />
+    <ExternalCompile Include="Unit\InvoiceListTest.cs" />
+    <ExternalCompile Include="Unit\InvoiceTest.cs" />
+    <ExternalCompile Include="Unit\MetadataTest.cs" />
+    <ExternalCompile Include="Unit\MigrationTest.cs" />
+    <ExternalCompile Include="Unit\OrderTest.cs" />
+    <ExternalCompile Include="Unit\PhoneTest.cs" />
   </ItemGroup>
 </Project>

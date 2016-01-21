@@ -66,61 +66,11 @@
     <Reference Include="System.Xml" />
     <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+	  <Private>True</Private>
     </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Api\Resources\Elements\Address.cs" />
-    <Compile Include="Provider\APIContext.cs" />
-    <Compile Include="Api\Resources\Elements\Banner.cs" />
-    <Compile Include="Api\Resources\Elements\Cart.cs" />
-    <Compile Include="Api\Resources\Elements\Customer.cs" />
-    <Compile Include="Api\Resources\Elements\CustomerData.cs" />
-    <Compile Include="Api\Resources\Elements\EmailAddressRequest.cs" />
-    <Compile Include="Api\Resources\Elements\EmailStatusList.cs" />
-    <Compile Include="Api\Resources\Elements\InvoiceCustomerFilter.cs" />
-    <Compile Include="Api\Resources\Elements\Email.cs" />
-    <Compile Include="Provider\ExpresslyClient.cs" />
-    <Compile Include="Api\Resources\ExpresslySerializableListObject.cs" />
-    <Compile Include="Api\Resources\ExpresslySerializableObject.cs" />
-    <Compile Include="Api\Resources\IExpresslySerializableObject.cs" />
-    <Compile Include="Api\Resources\Elements\Invoice.cs" />
-    <Compile Include="Api\Resources\Elements\InvoiceList.cs" />
-    <Compile Include="Api\Resources\Elements\InvoiceListRequest.cs" />
-    <Compile Include="Util\JsonFormatter.cs" />
-    <Compile Include="Api\Resources\Elements\MerchantPing.cs" />
-    <Compile Include="Api\Resources\Elements\Metadata.cs" />
-    <Compile Include="Api\Resources\Elements\Migration.cs" />
-    <Compile Include="Api\Resources\Elements\Order.cs" />
-    <Compile Include="Api\Resources\Elements\Phone.cs" />
-    <Compile Include="Api\Resources\Elements\PingPluginResponse.cs" />
-    <Compile Include="Api\Resources\Elements\RegisteredPluginResponse.cs" />
-    <Compile Include="Api\Resources\Elements\RegisterPluginRequest.cs" />
-    <Compile Include="Api\Resources\Elements\SuccessMessageResponse.cs" />
-    <Compile Include="BaseConstants.cs" />
-    <Compile Include="Api\Exception\ConfigException.cs" />
-    <Compile Include="Api\Exception\ConnectionException.cs" />
-    <Compile Include="Api\Exception\ExpresslyException.cs" />
-    <Compile Include="Api\Exception\HttpException.cs" />
-    <Compile Include="Provider\ExpresslyProvider.cs" />
-    <Compile Include="MerchantRouter.cs" />
-    <Compile Include="ExpresslyPlugin.cs" />
-    <Compile Include="Provider\HttpConnection.cs" />
-    <Compile Include="Log\BaseLogger.cs" />
-    <Compile Include="Log\DiagnosticsLogger.cs" />
-    <Compile Include="Log\Log4netLogger.cs" />
-    <Compile Include="Log\LogConfiguration.cs" />
-    <Compile Include="Log\Logger.cs" />
-    <Compile Include="Log\LogMessage.cs" />
-    <Compile Include="Log\TraceSourceUtil.cs" />
-    <Compile Include="Manager\ConfigManager.cs" />
-    <Compile Include="Manager\ConnectionManager.cs" />
-    <Compile Include="Manager\SDKConfigHandler.cs" />
-    <Compile Include="Provider\IMerchantProvider.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Util\ArgumentValidator.cs" />
-    <Compile Include="Util\HttpRequestExtensions.cs" />
-    <Compile Include="Util\QueryParameters.cs" />
-    <Compile Include="Util\SDKUtil.cs" />
+    <ItemGroup>
+    <Compile Include="@(ExternalCompile)" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -55,7 +55,5 @@ namespace Expressly.Api
 
             return ExpresslyClient.ConfigureAndExecute<SuccessMessageResponse>(apiContext, ExpresslyClient.HttpMethod.POST, resourcePath).success;
         }
-
-
     }
 }

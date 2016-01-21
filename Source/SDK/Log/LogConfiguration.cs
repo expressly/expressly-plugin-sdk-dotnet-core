@@ -51,7 +51,7 @@ namespace Expressly.Log
                 return null;
             }
 
-            if(string.IsNullOrEmpty(delimiter))
+            if (string.IsNullOrEmpty(delimiter))
             {
                 delimiter = ExpresslyLogDefaultDelimiter; // Default is a comma-separated list.
             }
@@ -61,9 +61,9 @@ namespace Expressly.Log
             if (splitList == null || splitList.Count == 0)
             {
                 return null;
-            }                        
+            }
 
-            foreach(string split in splitList)
+            foreach (string split in splitList)
             {
                 if (!loggerList.Contains(split.Trim()))
                 {
@@ -72,7 +72,7 @@ namespace Expressly.Log
             }
 
             return loggerList;
-        }     
+        }
 
         private static string GetConfiguration(string name)
         {
@@ -99,5 +99,5 @@ namespace Expressly.Log
 
             return default(bool);
         }
-    }   
+    }
 }
